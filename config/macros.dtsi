@@ -1,3 +1,15 @@
+macro_next_win_l: macro_next_win_l{
+compatible = "zmk,behavior-macro";
+label = "macro_next_win_l";
+#binding-cells = <0>;
+bindings = <&kp LCMD>, <&kp LBKT>;
+};
+macro_next_win_r: macro_next_win_r{
+compatible = "zmk,behavior-macro";
+label = "macro_next_win_r";
+#binding-cells = <0>;
+bindings = <&kp LCMD>, <&kp RBKT>;
+};
 macro_next_app_2: macro_next_app_2{
 compatible = "zmk,behavior-macro";
 label = "macro_next_app_2";
