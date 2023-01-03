@@ -31,6 +31,11 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+    nb_home: nb_home {
+             compatible = "zmk,behavior-mod-morph";
+             bindings = <&kp RG(TAB)>, <&kp HOME>;
+             mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 
     keymap {
