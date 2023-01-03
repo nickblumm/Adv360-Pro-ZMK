@@ -33,6 +33,7 @@
     };
     nb_home: nb_home {
              compatible = "zmk,behavior-mod-morph";
+             label = "NB_HOME";
              bindings = <&kp RG(TAB)>, <&kp HOME>;
              mods = <(MOD_LSFT|MOD_RSFT)>;
     };
