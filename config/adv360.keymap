@@ -59,6 +59,20 @@
              bindings = <&nb_pg_up0>, <&kp LG(LS(RBKT))>;
              mods = <(MOD_LGUI|MOD_RGUI)>;
     };
+    nb_pg_dn0: nb_pg_dn0{
+             compatible = "zmk,behavior-mod-morph";
+             label = "NB_PG_DN0";
+             #binding-cells = <0>;
+             bindings = <&kp LG(LBKT)>, <&kp PG_DN>;
+             mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    nb_pg_dn1: nb_pg_dn1{
+             compatible = "zmk,behavior-mod-morph";
+             label = "NB_PG_DN1";
+             #binding-cells = <0>;
+             bindings = <&nb_pg_dn0>, <&kp LG(LS(LBKT))>;
+             mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
   };
 
     keymap {
@@ -71,7 +85,7 @@
    &kp ESC      &kp Q     &kp W     &kp E      &kp R     &kp T              &none     &none              &kp Y      &kp U      &kp I              &kp O     &kp P   &kp BSLH
    &kp TAB      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LCMD           &kp LALT                                &kp RCTRL  &kp RCMD      &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none     &none           &nb_home      &none      &none          &nb_pg_up1    &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL   &nb_end          &kp PG_DN  &kp ENTER  &kp SPACE           &kp DOWN    &kp UP   &kp LBKT  &kp RBKT   &mo 2
+     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL   &nb_end          &nb_pg_dn1 &kp ENTER  &kp SPACE           &kp DOWN    &kp UP   &kp LBKT  &kp RBKT   &mo 2
             >;
         };
 
