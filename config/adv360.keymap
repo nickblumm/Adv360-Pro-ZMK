@@ -45,6 +45,20 @@
             bindings = <&macro_nb_end>, <&kp END>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    nb_pg_up0: nb_pg_up0{
+             compatible = "zmk,behavior-mod-morph";
+             label = "NB_PG_UP0";
+             #binding-cells = <0>;
+             bindings = <&kp LG(RBKT)>, <&kp PG_UP>;
+             mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    nb_pg_up1: nb_pg_up1{
+             compatible = "zmk,behavior-mod-morph";
+             label = "NB_PG_UP1";
+             #binding-cells = <0>;
+             bindings = <&nb_pg_up0>, <&kp LG(LS(RBKT))>;
+             mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
   };
 
     keymap {
